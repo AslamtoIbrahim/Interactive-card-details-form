@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+label{
+    @apply
+    block text-violet-gr-v-dr uppercase font-semibold tracking-wide mb-1
+
+}
+
+input{
+    @apply
+    border-violet-gr border-[1px] rounded-md inline-block  px-3  py-2 outline-none
+    mb-4 w-full
+    focus:border-violet-gr-v-dr
+}
