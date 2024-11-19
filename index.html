@@ -57,20 +57,30 @@
     </div>
 
     <div class="h-full flex justify-center items-center font-spgr">
-      <form action="">
+      <form class="w-[480px]  " action="">
         <label for="name">Cardholder Name</label>
         <input id="name" type="text" placeholder="e.g. Jane Appleseed">
         <label for="numbre-card">Card Number</label>
         <input type="text" id="numbre-card" placeholder="e.g. 1234 5678 9123 0000">
 
-        <label class="" for="exp-date-mm">Exp. Date (MM/YY)
-          <input  type="text" id="exp-date-mm" placeholder="MM">
-          <input type="text" id="exp-date-yy" placeholder="YY">
-        </label>
+        <div class="grid grid-cols-[1fr_2fr] gap-2">
+          <label class="" for="exp-date-mm">Exp. Date (MM/YY)
+            <div class="flex gap-2">
+              <input type="text" id="exp-date-mm" placeholder="MM">
+              <input type="text" id="exp-date-yy" placeholder="YY">
+            </div>
+          </label>
+          <label for="cvc">CVC
+            <input type="text" id="cvc" placeholder="e.g. 123">
+          </label>
+        </div>
 
-        <label for="cvc">CVC</label>
-        <input type="text" id="cvc" placeholder="e.g. 123">
-        <button type="submit">Confirm</button>
+
+        <button class="w-full rounded-md py-2 bg-violet-gr-v-dr text-white mt-3
+        hover:bg-violet-gr-dr hover:text-violet-gr-v-dr" 
+         type="submit"
+
+        >Confirm</button>
       </form>
     </div>
 
