@@ -31,9 +31,9 @@
     <div class="bg-no-repeat bg-cover flex flex-col justify-center items-end"
       style="background-image: url(images/bg-main-desktop.png);">
 
-      <div class="bg-no-repeat bg-contain bg-center h-fit w-fit 
+      <div id="front-card" class="bg-no-repeat bg-contain bg-center h-fit w-fit 
        box-border text-white flex flex-col gap-4  justify-between p-6 lg:p-10 mb-4 
-       relative left-2" style="background-image: url(images/bg-card-front.png);">
+       relative left-2" style="background-image: url(images/bg-card-front.png); --rf-w:w-fit; --rf-h:h-fit;">
 
         <div class="flex items-center gap-3">
           <span class="inline-block w-7 h-7 bg-white rounded-full "></span>
@@ -50,9 +50,9 @@
 
       </div>
 
-      <div class="bg-no-repeat bg-contain w-fit h-fit 
-      flex items-center justify-end relative left-1"
-       style="background-image: url('./images/bg-card-back.png');">
+      <div id="back-card" class="bg-no-repeat bg-contain  
+       flex items-center justify-end relative left-1"
+       style="background-image: url('./images/bg-card-back.png'); width: var(--rf-w); height: var(--rf-h); ">
         <span class="relative bottom-2 mr-9 text-white font-lfr text-base">000</span>
       </div>
     </div>
@@ -91,6 +91,8 @@
     Continue -->
 
   </main>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
