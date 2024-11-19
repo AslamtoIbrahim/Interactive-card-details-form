@@ -578,12 +578,20 @@ video {
   margin-right: 2.25rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .box-border {
@@ -622,12 +630,29 @@ video {
   height: 100vh;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .w-10 {
   width: 2.5rem;
 }
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-\[345px\] {
@@ -646,24 +671,25 @@ video {
   width: 100vw;
 }
 
-.w-4\/5 {
-  width: 80%;
+.w-\[245px\] {
+  width: 245px;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-\[180px\] {
+  width: 180px;
 }
 
-.w-\[\] {
-  width: ;
+.w-\[20px\] {
+  width: 20px;
 }
 
-.w-\[480\] {
-  width: 480;
+.w-auto {
+  width: auto;
 }
 
-.w-\[480px\] {
-  width: 480px;
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .grid-cols-\[1fr_2fr\] {
@@ -702,6 +728,14 @@ video {
   gap: 0.75rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -719,19 +753,14 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
-.bg-red-400 {
+.bg-violet-gr-v-dr {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+  background-color: hsl(278 68% 11% / var(--tw-bg-opacity, 1));
 }
 
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-violet-gr-v-dr {
-  --tw-bg-opacity: 1;
-  background-color: hsl(278 68% 11% / var(--tw-bg-opacity, 1));
 }
 
 .bg-contain {
@@ -740,6 +769,18 @@ video {
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-auto {
+  background-size: auto;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-no-repeat {
@@ -768,6 +809,19 @@ video {
   line-height: 1.5rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-\[0\.5rem\] {
+  font-size: 0.5rem;
+}
+
+.text-\[0\.7rem\] {
+  font-size: 0.7rem;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -785,18 +839,36 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-violet-gr-v-dr {
-  --tw-text-opacity: 1;
-  color: hsl(278 68% 11% / var(--tw-text-opacity, 1));
+.text-\[\] {
+  color: ;
+}
+
+.text-\[0\.5\] {
+  color: 0.5;
 }
 
 label {
   display: block;
+  font-size: 0.5rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
   color: hsl(278 68% 11% / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 640px) {
+  label {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 input {
@@ -812,6 +884,7 @@ input {
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-size: 0.5rem;
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -819,6 +892,20 @@ input {
 input:focus {
   --tw-border-opacity: 1;
   border-color: hsl(278 68% 11% / var(--tw-border-opacity, 1));
+}
+
+@media (min-width: 640px) {
+  input {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  input {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .hover\:bg-violet-gr-dr:hover {
@@ -829,4 +916,49 @@ input:focus {
 .hover\:text-violet-gr-v-dr:hover {
   --tw-text-opacity: 1;
   color: hsl(278 68% 11% / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 640px) {
+  .sm\:w-\[380px\] {
+    width: 380px;
+  }
+
+  .sm\:w-\[345px\] {
+    width: 345px;
+  }
+
+  .sm\:w-\[2px\] {
+    width: 2px;
+  }
+
+  .sm\:w-\[265px\] {
+    width: 265px;
+  }
+
+  .sm\:w-\[280px\] {
+    width: 280px;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:w-\[480px\] {
+    width: 480px;
+  }
+
+  .md\:w-\[345px\] {
+    width: 345px;
+  }
+
+  .md\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .md\:w-\[3px\] {
+    width: 3px;
+  }
 }
