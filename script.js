@@ -1,6 +1,8 @@
 const frontCard = document.getElementById('front-card');
 const backCard = document.getElementById('back-card');
 
+setDimensions();
+
 function setDimensions() {
     const width = frontCard.offsetWidth;
     const height = frontCard.offsetHeight;
@@ -8,6 +10,5 @@ function setDimensions() {
     backCard.style.height = height + 'px';
 }
 
-setDimensions();
 
 window.addEventListener('resize', setDimensions);

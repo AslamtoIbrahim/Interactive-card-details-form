@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'bgimg': "url('./images/bg-main-desktop.png')",
         'fcard': "url('./images/bg-card-front.png')",
          'bcard': "url('./images/bg-card-back.png')",
       },
