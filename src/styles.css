@@ -562,8 +562,8 @@ video {
   left: -2.5rem;
 }
 
-.mr-11 {
-  margin-right: 2.75rem;
+.mr-14 {
+  margin-right: 3.5rem;
 }
 
 .mt-3 {
@@ -590,16 +590,16 @@ video {
   display: grid;
 }
 
-.h-5 {
-  height: 1.25rem;
+.h-4 {
+  height: 1rem;
 }
 
-.h-9 {
-  height: 2.25rem;
+.h-7 {
+  height: 1.75rem;
 }
 
-.h-\[145px\] {
-  height: 145px;
+.h-\[180px\] {
+  height: 180px;
 }
 
 .h-full {
@@ -610,16 +610,20 @@ video {
   height: 100vh;
 }
 
-.w-5 {
-  width: 1.25rem;
+.w-4 {
+  width: 1rem;
 }
 
-.w-9 {
-  width: 2.25rem;
+.w-7 {
+  width: 1.75rem;
 }
 
-.w-\[200px\] {
-  width: 200px;
+.w-\[350px\] {
+  width: 350px;
+}
+
+.w-\[430px\] {
+  width: 430px;
 }
 
 .w-full {
@@ -640,6 +644,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
 }
 
 .items-center {
@@ -697,13 +705,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-yellow-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
+.bg-\[\] {
+  background-color: ;
 }
 
-.bg-bgimg {
-  background-image: url('./images/bg-main-desktop.png');
+.bg-\[50\] {
+  background-color: 50;
+}
+
+.bg-\[length\:50\%_height\] {
+  background-size: 50% height;
 }
 
 .bg-contain {
@@ -718,16 +729,20 @@ video {
   background-position: center;
 }
 
-.bg-left {
-  background-position: left;
+.bg-left-top {
+  background-position: left top;
+}
+
+.bg-\[50\%\] {
+  background-position: 50%;
 }
 
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-2 {
@@ -743,12 +758,12 @@ video {
   font-family: Space Grotesk, serif;
 }
 
-.text-\[0\.5rem\] {
-  font-size: 0.5rem;
-}
-
 .text-\[0\.6rem\] {
   font-size: 0.6rem;
+}
+
+.text-\[1rem\] {
+  font-size: 1rem;
 }
 
 .text-base {
@@ -771,7 +786,7 @@ video {
 
 label {
   display: block;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.025em;
@@ -781,15 +796,13 @@ label {
 
 @media (min-width: 640px) {
   label {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 768px) {
   label {
     font-size: 1rem;
-    line-height: 1.5rem;
   }
 }
 
@@ -806,7 +819,7 @@ input {
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -845,20 +858,12 @@ input:focus {
     height: 200px;
   }
 
-  .sm\:w-\[250px\] {
-    width: 250px;
-  }
-
-  .sm\:w-\[350px\] {
-    width: 350px;
-  }
-
   .sm\:gap-8 {
     gap: 2rem;
   }
 
-  .sm\:p-6 {
-    padding: 1.5rem;
+  .sm\:p-7 {
+    padding: 1.75rem;
   }
 
   .sm\:text-\[0\.8rem\] {
@@ -881,20 +886,44 @@ input:focus {
     margin-bottom: 2.5rem;
   }
 
+  .md\:mr-11 {
+    margin-right: 2.75rem;
+  }
+
+  .md\:h-6 {
+    height: 1.5rem;
+  }
+
+  .md\:h-9 {
+    height: 2.25rem;
+  }
+
   .md\:h-\[245px\] {
     height: 245px;
+  }
+
+  .md\:w-6 {
+    width: 1.5rem;
+  }
+
+  .md\:w-9 {
+    width: 2.25rem;
   }
 
   .md\:w-\[380px\] {
     width: 380px;
   }
 
-  .md\:w-\[420px\] {
-    width: 420px;
+  .md\:w-\[430px\] {
+    width: 430px;
   }
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
   }
 
   .md\:p-8 {
@@ -929,8 +958,16 @@ input:focus {
     width: 447px;
   }
 
+  .lg\:w-\[465px\] {
+    width: 465px;
+  }
+
   .lg\:items-end {
     align-items: flex-end;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
   }
 
   .lg\:text-2xl {

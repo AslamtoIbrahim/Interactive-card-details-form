@@ -30,15 +30,15 @@
   <main class="h-screen w-screen grid md:grid-cols-2 font-pgro">
 
     <!-- 🟢 The left side with the cards -->
-    <div class="
-    bg-no-repeat  
-    flex flex-col justify-center items-center lg:items-end"
-    style="background-image: url(images/bg-main-desktop.png);">
+    <div id="left-side" class="
+    bg-no-repeat bg-left-top  bg-contain
+    flex flex-col-reverse md:flex-col justify-center items-center lg:items-end
+    gap-4 " style="background-image: url('');">
 
       <!-- 📙 the card front -->
       <div id="front-card" class="
-       w-[200px] sm:w-[350px] md:w-[380px] lg:w-[447px] h-[145px] sm:h-[200px] md:h-[245px]
-       p-4 sm:p-6 md:p-8 lg:12 
+       w-[350px] md:w-[380px] lg:w-[447px] h-[180px] sm:h-[200px] md:h-[245px]
+       p-6  sm:p-7  md:p-8 lg:p-12  
        bg-no-repeat bg-contain bg-center 
        box-border text-white flex flex-col justify-between gap-4 sm:gap-8 
        relative -left-10 lg:-left-14"
@@ -47,9 +47,9 @@
        <!-- shapes content -->
         <div class="flex items-center gap-3">
           <!-- this big cirlce ⚪ -->
-          <span class="inline-block w-9 h-9 bg-white rounded-full "></span>
+          <span class="inline-block w-7 h-7 md:w-9 md:h-9 bg-white rounded-full "></span>
           <!-- this small circle 🔘 -->
-          <span class="inline-block w-5 h-5 border-white border-[1px] rounded-full "></span>
+          <span class="inline-block w-4 h-4 md:w-6 md:h-6  border-white border-[1px] rounded-full "></span>
         </div>
 
         <!-- text content -->
@@ -75,18 +75,20 @@
        style="background-image: url('./images/bg-card-back.png');">
        <!-- three digits 000 -->
         <span class="
-        mr-11 lg:mr-12  md:mb-10 lg:mb-2 
-       text-white font-lfr 
-         text-[0.5rem] sm:text-sm md:text-base lg:text-xl ">000</span>
+        mr-14 md:mr-11 lg:mr-12 md:mb-10 lg:mb-2 
+      text-white font-lfr 
+        text-[1rem] sm:text-sm md:text-base lg:text-xl">000</span>
       </div>
 
     </div>
 
+
+
     <!-- 📗 The right side with the form -->
-    <div class="h-full flex justify-center items-center font-spgr bg-yellow-400">
+    <div class="h-full flex justify-center items-center font-spgr">
 
       <!-- 📗 form element -->
-      <form class="w-[200px] sm:w-[250px] md:w-[420px]" action="">
+      <form class="w-[430px] md:w-[430px] lg:w-[465px]" action="">
 
         <label for="name">Cardholder Name</label>
         <input id="name" type="text" placeholder="e.g. Jane Appleseed">
