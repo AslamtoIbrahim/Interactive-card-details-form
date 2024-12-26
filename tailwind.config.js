@@ -20,6 +20,19 @@ module.exports = {
         'lfr': ['Karla','serif'],
         'redhat': ['','serif'],
       },
+
+      keyframes:{
+        customAnimation:{
+          '0%':{transform: 'translateX(0)', opacity:'1'},
+          '25%':{transform: 'translateX(-5px)', opacity:'0.5'},
+          '50%':{transform: 'translateX(0)', opacity:'1'},
+          '75%':{transform: 'translateX(5px)', opacity:'0.5'},
+          '100%':{transform: 'translateX(0)', opacity:'1'},
+        }
+      },
+      animation:{
+        custom: 'customAnimation 0.3s ease-in-out'
+      }
     },
   },
   plugins: [],

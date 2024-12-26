@@ -41,10 +41,9 @@
        p-6  sm:p-7  md:p-8 lg:p-12  
        bg-no-repeat bg-contain bg-center 
        box-border text-white flex flex-col justify-between gap-4 sm:gap-8 
-       relative -left-10 lg:-left-14"
-        style="background-image: url(images/bg-card-front.png);">
+       relative -left-10 lg:-left-14" style="background-image: url(images/bg-card-front.png);">
 
-       <!-- shapes content -->
+        <!-- shapes content -->
         <div class="flex items-center gap-3">
           <!-- this big cirlce ⚪ -->
           <span class="inline-block w-7 h-7 md:w-9 md:h-9 bg-white rounded-full "></span>
@@ -54,15 +53,14 @@
 
         <!-- text content -->
         <div class="w-full font-spgr">
-          <p class="
+          <p id="number-card" class="
           text-base sm:text-lg md:text-xl lg:text-2xl
-          tracking-widest"
-          >0000 0000 0000 0000</p>
+          tracking-widest">0000 0000 0000 0000</p>
           <div class="
           text-[0.6rem] sm:text-[0.8rem] 
           flex justify-between g-8 mt-4 uppercase">
-            <span class="tracking-widest">Jane Appleseed</span>
-            <span class="">00/00</span>
+            <span id="card-holder-name" class="tracking-widest">Jane Appleseed</span>
+            <span id="card-month-year" class="">00/00</span>
           </div>
         </div>
 
@@ -71,10 +69,9 @@
 
       <!-- 📙 the card back -->
       <div id="back-card" class="bg-no-repeat bg-contain  
-       flex justify-end items-center "
-       style="background-image: url('./images/bg-card-back.png');">
-       <!-- three digits 000 -->
-        <span class="
+       flex justify-end items-center " style="background-image: url('./images/bg-card-back.png');">
+        <!-- three digits 000 -->
+        <span id="card-cvc" class="
         mr-14 md:mr-11 lg:mr-12 md:mb-10 lg:mb-2 
       text-white font-lfr 
         text-[1rem] sm:text-sm md:text-base lg:text-xl">000</span>
@@ -92,26 +89,35 @@
 
         <label for="name">Cardholder Name</label>
         <input id="name" type="text" placeholder="e.g. Jane Appleseed">
+        <p id="name-error" class="error">Can't be blank</p>
 
-        <label for="numbre-card">Card Number</label>
-        <input type="text" id="numbre-card" placeholder="e.g. 1234 5678 9123 0000">
+        <label for="number">Card Number</label>
+        <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000">
+        <p id="number-error" class="error">Wrong format, number only</p>
 
         <div class="grid grid-cols-[1fr_2fr] gap-2">
-          <label class="" for="exp-date-mm">Exp. Date (MM/YY)
-            <div class="flex gap-2">
-              <input type="text" id="exp-date-mm" placeholder="MM">
-              <input type="text" id="exp-date-yy" placeholder="YY">
-            </div>
-          </label>
-          <label for="cvc">CVC
-            <input type="text" id="cvc" placeholder="e.g. 123">
-          </label>
+          <div>
+            <label class="" for="expDateMonth">Exp. Date (MM/YY)
+              <div class="flex gap-2">
+                <input type="text" id="expDateMonth" placeholder="MM">
+                <input type="text" id="expDateYear" placeholder="YY">
+              </div>
+            </label>
+            <p id="month-year-error" class="error">Can't be blank</p>
+            
+          </div>
+
+          <div>
+            <label for="cvc">CVC
+              <input type="text" id="cvc" placeholder="e.g. 123">
+            </label>
+            <p id="cvc-error" class="error">Can't be blank</p>
+          </div>
         </div>
 
 
-        <button class="w-full rounded-md py-2 bg-violet-gr-v-dr text-white mt-3
-        hover:bg-violet-gr-dr hover:text-violet-gr-v-dr" 
-         type="submit">Confirm</button>
+        <button id="confirm" class="w-full rounded-md py-2 bg-violet-gr-v-dr text-white mt-3
+        hover:bg-violet-gr-dr hover:text-violet-gr-v-dr" type="button">Confirm</button>
 
       </form>
     </div>
