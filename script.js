@@ -15,6 +15,9 @@ const numberCard = document.getElementById('number-card');
 const cardHolderName = document.getElementById('card-holder-name');
 const cardMonthYear = document.getElementById('card-month-year');
 const cardCvc = document.getElementById('card-cvc');
+const inputSide = document.getElementById('input-side');
+const completeSide = document.getElementById('complete-side');
+const continueBtn = document.getElementById('continue');
 
 let isMonthOk = false;
 
@@ -63,7 +66,18 @@ confirm.addEventListener('click', () => {
     if (cvcNumber)
         cardCvc.textContent = cvcNumber;
 
+    if (cardNumber && userName && expDateMonth && expDateYear && cvcNumber) {
+        inputSide.style.display = 'none';
+        completeSide.style.display = 'flex';
+    }
+
 })
+
+
+continueBtn.addEventListener('click', function () {
+     window.open('about:blank','_blank');
+})
+
 
 function getCorrectCardHolderName() {
     const inputValue = validateInput(nameError, userName);
@@ -151,7 +165,7 @@ function getCorrectExpYear() {
     }
 
     console.log('ok', isMonthOk);
-    
+
     if (isMonthOk === true) {
         hideError(monthYearError, expDateYear);
     }
@@ -212,7 +226,7 @@ function formatNumber(input) {
 }
 
 
-function getYearTwoDigits(){
+function getYearTwoDigits() {
     const year = new Date().getFullYear();
     return Number(year.toString().slice(-2));
 }
